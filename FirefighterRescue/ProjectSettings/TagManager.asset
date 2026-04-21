@@ -2,17 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Fire
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Fire
   - Water
   - UI
-  - 
-  - 
+  - Effects
+  - Buildings
   - 
   - 
   - 
@@ -41,3 +43,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Buildings
+    uniqueID: 2935542649
+    locked: 0
+  - name: Buildings
+    uniqueID: 1980732223
+    locked: 0
+  - name: Player
+    uniqueID: 2229445777
+    locked: 0
+  - name: Effects
+    uniqueID: 2786667249
+    locked: 0
+  - name: UI
+    uniqueID: 2987235915
+    locked: 0
+  m_RenderingLayers:
+  - Default
