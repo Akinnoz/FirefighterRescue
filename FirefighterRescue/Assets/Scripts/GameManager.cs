@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         timeLeft -= Time.deltaTime;
         timerText.text = "Time : " + Mathf.Ceil(timeLeft);
 
-        fireText.text = currentFire + "/" + totalFire;
+        fireText.text = "ดับไฟ: " + currentFire + "/" + totalFire;
 
         if (timeLeft <= 0)
         {

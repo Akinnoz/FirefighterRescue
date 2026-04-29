@@ -25,23 +25,20 @@ public class FireHose : MonoBehaviour
 
     void ShootWater()
     {
-        for (int i = -2; i <= 2; i++)
+        Vector2 dir = firePoint.up;
+
+        RaycastHit2D hit = Physics2D.Raycast(
+            firePoint.position,
+            dir,
+            range,
+            fireLayer
+        );
+
+        Debug.DrawRay(firePoint.position, dir * range, Color.blue);
+
+        if (hit.collider != null)
         {
-            Vector2 dir = Quaternion.Euler(0, 0, i * 8) * firePoint.up;
-
-            RaycastHit2D hit = Physics2D.Raycast(
-                firePoint.position,
-                dir,
-                range,
-                fireLayer
-            );
-
-            Debug.DrawRay(firePoint.position, dir * range, Color.blue);
-
-            if (hit.collider != null)
-            {
-                Destroy(hit.collider.gameObject);
-            }
+            Destroy(hit.collider.gameObject);
         }
     }
 }
