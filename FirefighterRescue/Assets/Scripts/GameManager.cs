@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public float timeLeft = 10f;
     public int totalFire = 2;
     public int currentFire = 0;
+    float timer = 2f;
 
     public GameObject person;
     public GameObject truck;
@@ -63,9 +64,10 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        while (truck.transform.position.x < 15f)
+        while (timer > 0)
         {
             truck.transform.Translate(Vector2.right * 3f * Time.deltaTime);
+            timer -= Time.deltaTime;
             yield return null;
         }
 
@@ -74,7 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("LoseScene");
     }
 
     public void PrevLevel()
@@ -86,7 +88,23 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        int id = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(id + 1);
+        string current = SceneManager.GetActiveScene().name;
+
+        if (current == "Level1")
+        {
+            PlayerPrefs.SetInt("UnlockedLevel", 2);
+        }
+        else if (current == "Level2")
+        {
+            PlayerPrefs.SetInt("UnlockedLevel", 3);
+        }
+        else if (current == "Level3")
+        {
+            SceneManager.LoadScene("WinScene");
+            return;
+        }
+
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("LevelSelect");
     }
 }

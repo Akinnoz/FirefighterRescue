@@ -1511,8 +1511,8 @@ MonoBehaviour:
   timerText: {fileID: 1582337832}
   fireText: {fileID: 246437701}
   messageText: {fileID: 1163635977}
-  timeLeft: 15
-  totalFire: 4
+  timeLeft: 10
+  totalFire: 6
   currentFire: 0
   person: {fileID: 1137724961}
   truck: {fileID: 204236631}
