@@ -603,24 +603,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2772153949957568269, guid: 05a357c739fcd4330b9773407e8d9331, type: 3}
   m_PrefabInstance: {fileID: 833283329}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &204236641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204236631}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b4acf47df192c479d365f00ca6eab4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FireHose
-  waterEffect: {fileID: 0}
-  firePoint: {fileID: 2041412564}
-  range: 12
-  fireLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1 &246437699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,9 +1738,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3257083264415493559, guid: 05a357c739fcd4330b9773407e8d9331, type: 3}
       insertIndex: -1
       addedObject: {fileID: 204236632}
-    - targetCorrespondingSourceObject: {fileID: 3257083264415493559, guid: 05a357c739fcd4330b9773407e8d9331, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 204236641}
   m_SourcePrefab: {fileID: 100100000, guid: 05a357c739fcd4330b9773407e8d9331, type: 3}
 --- !u!1 &868711479
 GameObject:
